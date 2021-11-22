@@ -33,18 +33,28 @@ public class Object extends Ground{
 	}
 	public Coordinates getCoordinates() {
 		return coordinates;
-	}
+	} 
 	public void setCoordinates(Coordinates coordinates) {
 		this.coordinates = coordinates;
 	}
-	
+	public Object(Ground ground,Coordinates coordinates) {
+		this(ground,0,0,0,coordinates,0);
+	}
 	public Object(Ground ground, int objectid, double weight, double v, Coordinates coordinates, double a) {
-		super(ground);
+		this(ground.getTheta(),ground.getMu(),ground.getE(),objectid,weight,v,coordinates,a);
+	}
+	public Object(double theta, double mu, double e, int objectid, double weight, double v, Coordinates coordinates,double a) {
+		super(theta, mu, e);
 		this.objectid = objectid;
 		this.weight = weight;
 		this.v = v;
 		this.coordinates = coordinates;
 		this.a = a;
 	}
+	public Object (Object obj) {
+		this(obj.getTheta(),obj.getMu(),obj.getE(),obj.objectid,obj.weight,obj.v,obj.coordinates,obj.a);
+	}
 	
 }
+	
+
