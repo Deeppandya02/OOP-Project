@@ -1,8 +1,7 @@
-package trial;
-
+package oops;
 
 public class Ground {
-	private double theta;
+	private double theta;//for angle of projection and angle of slope
 	private double g;
 	private double mu;
 	private double e;
@@ -22,16 +21,13 @@ public class Ground {
 	public double getE() {
 		return e;
 	}
-	
-	public Ground(double theta, double g, double mu, double e) {
+	public Ground(double theta, double mu, double e) {
 		this.theta = theta;
-		this.g = g;
+		this.g = 9.8;
 		this.mu = mu;
 		this.e = e;
 	}
-	
 	public Ground(Ground ground) {
-		// TODO Auto-generated constructor stub
-		this(ground.theta, ground.g, ground.mu, ground.e);
+		this(ground.theta,ground.mu,ground.e);
 	}
 }
