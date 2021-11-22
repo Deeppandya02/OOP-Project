@@ -28,18 +28,26 @@ public class Driver {
 		String objID;
 		String objTypeID;
 		//Print obj type id for each type
+		System.out.println("Enter ObjID");
 		objID = sc.nextLine();
-		objID = sc.nextLine();
+		System.out.println("Enter ObjTypeID");
+		objTypeID = sc.nextLine();
+		System.out.println("Enter intial coordinates of object");
 		double x,y;
 		x = sc.nextDouble();
 		y = sc.nextDouble();
 		//Orientation;
-		Object obj;
+		Object obj[i];
 		switch(objTypeID)
 		{
 			case 0: 
-				obj = new Box();
-				
+				obj[i] = new Box();
+				System.out.println("Enter length");
+				double length = sc.nextDouble();
+				System.out.println("Enter width");
+				double width = sc.nextDouble();
+				System.out.println("Enter height");
+				double height = sc.nextDouble();
 		
 	}	
 	
